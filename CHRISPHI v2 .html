@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donut Shop • List-Based</title>
+  <style>
+    :root{
+      --pink:#ff66b2;
+      --pink-dark:#ff3399;
+      --orange:#ff9900;
+      --text:#333;
+      --bg:#fff6fb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+    }/* Header */
+header{
+  background:linear-gradient(90deg,var(--orange),var(--pink));
+  color:#fff;
+  padding:16px 20px;
+  position:sticky; top:0; z-index:10;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand img{width:42px;height:42px;border-radius:50%;border:2px solid #fff}
+.brand h1{font-size:20px;margin:0;letter-spacing:.5px}
+
+/* Nav using UL > LI */
+nav{margin-top:10px}
+.nav{
+  list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:10px;
+}
+.nav li{margin:0}
+.nav a{
+  display:inline-block; text-decoration:none; color:#fff; font-weight:700;
+  background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28);
+  padding:8px 14px; border-radius:999px; backdrop-filter:saturate(1.1) blur(4px);
+  transition:.2s ease; font-size:14px;
+}
+.nav a:hover{background:#fff;color:var(--pink-dark);}
+
+/* Sections */
+main{max-width:1100px;margin:26px auto; padding:0 16px 60px}
+section{background:#fff; border:1px solid #f2d3e7; border-radius:18px; padding:24px; margin:18px 0; box-shadow:0 10px 26px rgba(255,102,178,.08)}
+section h2{margin:0 0 10px;color:var(--pink-dark)}
+section p{margin:0 0 16px;line-height:1.6}
+
+/* Hero */
+.hero{display:grid; grid-template-columns:1.2fr .8fr; gap:16px; align-items:center}
+.hero .cta{display:flex; gap:10px; flex-wrap:wrap}
+.btn{background:var(--pink); color:#fff; border:none; padding:10px 16px; border-radius:999px; font-weight:700; cursor:pointer}
+.btn.secondary{background:#fff; color:var(--pink-dark); border:2px solid var(--pink-dark)}
+
+/* MENU built with UL > LI cards */
+.menu-list{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+.menu-list li{background:#fff; border:1px solid #ffd5ea; border-radius:16px; overflow:hidden}
+.card-media{height:150px; overflow:hidden}
+.card-media img{width:100%; height:100%; object-fit:cover; display:block}
+.card-body{padding:12px 14px}
+.card-title{font-weight:800; margin:0 0 6px;}
+.price{font-weight:800; color:var(--orange)}
+.addline{display:flex; gap:8px; align-items:center; margin-top:10px}
+.qty{width:56px; padding:6px 8px; border:1px solid #e8c2d8; border-radius:10px}
+
+/* ORDER: list of chosen items */
+.order-wrap{display:grid; grid-template-columns:1.2fr .8fr; gap:18px}
+.basket{list-style:decimal inside; margin:0; padding:0; background:#fff; border:1px dashed #ffb6db; border-radius:12px}
+.basket li{padding:10px 12px; border-bottom:1px dashed #ffe2f2}
+.basket li:last-child{border-bottom:0}
+.totals{background:#fff6fb; border:1px solid #ffd5ea; border-radius:12px; padding:14px}
+
+/* FRANCHISE: benefits list */
+.benefits{list-style:"✔  "; padding-left:18px}
+
+/* ABOUT: team list */
+.team{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px}
+.team li{background:#fff; border:1px solid #ffd5ea; border-radius:14px; padding:12px; display:flex; gap:12px; align-items:center}
+.team img{width:60px;height:60px;object-fit:cover;border-radius:50%}
+
+/* Small tweaks */
+a.anchor{position:relative; top:-90px; visibility:hidden}
+@media (max-width:800px){.hero{grid-template-columns:1fr}}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="https://i.postimg.cc/1tQ0hyFf/FB-IMG-1755763488072.jpg" alt="Donut Logo" />
+      <h1>🍩 Lorie's Donut Shop</h1>
+    </div>
+    <nav aria-label="Main Navigation">
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#franchise">Franchise</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>  <main>
+    <a id="home" class="anchor"></a>
+    <section class="hero">
+      <div>
+        <h2>Fresh Donuts & Hot Coffee, Daily</h2>
+        <p><b><i>“Donuts and coffee taste sweet… but never sweeter than Ma’am!”</i></b></p>
+        <div class="cta">
+          <a class="btn" href="#menu">See Menu</a>
+          <a class="btn secondary" href="#order">Start Order</a>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1549395156-1a1e0cfd83f8?q=80&w=900&auto=format&fit=crop" alt="Assorted donuts" style="width:100%;border-radius:14px;border:4px solid #ffe0f0"/>
+    </section><a id="menu" class="anchor"></a>
+<section>
+  <h2>Our Menu</h2>
+  <p>Everything is baked fresh. Tap a price to add to your basket.</p>
+  <ul class="menu-list" id="menuList">
+    <!-- Each PRODUCT is an LI -->
+    <li>
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=900&auto=format&fit=crop" alt="Chocolate Glazed" />
+      </div>
+      <div class="card-body">
+        <p class="card-title">Chocolate Glazed</p>
+        <small>Rich cocoa glaze over soft ring donut.</small>
+        <div class="addline">
+          <input class="qty" type="number" min="1" value="1" />
+          <button class="btn add" data-name="Chocolate Glazed" data-price="50">₱50 • Add</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?q=80&w=900&auto=format&fit=crop" alt="Classic Glazed" />
+      </div>
+      <div class="card-body">
+        <p class="card-title">Classic Glazed</p>
+        <small>Light, shiny glaze. The all-time favorite.</small>
+        <div class="addline">
+          <input class="qty" type="number" min="1" value="1" />
+          <button class="btn add" data-name="Classic Glazed" data-price="45">₱45 • Add</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1541753866388-0b3c701627d3?q=80&w=900&auto=format&fit=crop" alt="Strawberry Sprinkles" />
+      </div>
+      <div class="card-body">
+        <p class="card-title">Strawberry Sprinkles</p>
+        <small>Pink strawberry icing with rainbow sprinkles.</small>
+        <div class="addline">
+          <input class="qty" type="number" min="1" value="1" />
+          <button class="btn add" data-name="Strawberry Sprinkles" data-price="55">₱55 • Add</button>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-media">
+        <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=900&auto=format&fit=crop" alt="Hot Coffee" />
+      </div>
+      <div class="card-body">
+        <p class="card-title">Hot Coffee</p>
+        <small>Freshly brewed, smooth and bold.</small>
+        <div class="addline">
+          <input class="qty" type="number" min="1" value="1" />
+          <button class="btn add" data-name="Hot Coffee" data-price="65">₱65 • Add</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<a id="order" class="anchor"></a>
+<section>
+  <h2>Order</h2>
+  <div class="order-wrap">
+    <div>
+      <p><b>Your Basket</b></p>
+      <!-- Basket itself is an OL/UL list of LI items -->
+      <ol class="basket" id="basket"></ol>
+    </div>
+    <div class="totals">
+      <ul style="list-style:none;padding:0;margin:0">
+        <li style="display:flex;justify-content:space-between;padding:6px 0"><span>Items</span><b id="itemsCount">0</b></li>
+        <li style="display:flex;justify-content:space-between;padding:6px 0"><span>Subtotal</span><b id="subtotal">₱0</b></li>
+        <li style="display:flex;justify-content:space-between;padding:6px 0"><span>VAT (12%)</span><b id="vat">₱0</b></li>
+        <li style="display:flex;justify-content:space-between;padding:6px 0;border-top:1px dashed #ffd5ea;margin-top:6px"><span>Total</span><b id="total">₱0</b></li>
+      </ul>
+      <form onsubmit="event.preventDefault(); alert('Order placed! Thank you!');">
+        <ul style="list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px">
+          <li><input required placeholder="Your Name" style="width:100%;padding:10px;border:1px solid #e8c2d8;border-radius:10px"></li>
+          <li><input required type="tel" placeholder="Mobile Number" style="width:100%;padding:10px;border:1px solid #e8c2d8;border-radius:10px"></li>
+          <li><button class="btn" type="submit" style="width:100%">Place Order</button></li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</section>
+
+<a id="franchise" class="anchor"></a>
+<section>
+  <h2>Franchise</h2>
+  <p>Be part of our growing family. We provide training, marketing, and proven recipes.</p>
+  <ul class="benefits">
+    <li>Full training and SOP manuals</li>
+    <li>Marketing kits and launch support</li>
+    <li>Central kitchen supply & quality control</li>
+  </ul>
+</section>
+
+<a id="about" class="anchor"></a>
+<section>
+  <h2>About Us</h2>
+  <p>We started as a small neighborhood stall and grew through the love of our community. Freshness, quality, and joy—every day.</p>
+  <ul class="team">
+    <li>
+      <img src="https://i.postimg.cc/jddXSqFf/file-00000000c488622fa6bf451f8d44fd96.png" alt="Lorie"/>
+      <div>
+        <b>Lorie</b>
+        <p style="margin:4px 0 0">Founder & Lead Baker</p>
+      </div>
+    </li>
+    <li>
+      <img src="https://i.postimg.cc/ZRxRmk2j/1756133073273.jpg" alt="Asawa ni lorie"/>
+      <div>
+        <b>Asawa ni lorie</b>
+        <p style="margin:4px 0 0">Barista</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+  </main>  <footer style="text-align:center;padding:24px;color:#666">
+    <ul style="list-style:none; padding:0; margin:0; display:inline-flex; gap:12px">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#franchise">Franchise</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <p style="margin:10px 0 0">© 2025 Lorie's Donut Shop</p>
+  </footer>  <script>
+    // Simple cart logic; still keeps everything list-based visually
+    const basket = document.getElementById('basket');
+    const itemsCount = document.getElementById('itemsCount');
+    const subtotalEl = document.getElementById('subtotal');
+    const vatEl = document.getElementById('vat');
+    const totalEl = document.getElementById('total');
+
+    document.querySelectorAll('.add').forEach((btn)=>{
+      btn.addEventListener('click', (e)=>{
+        const card = e.target.closest('li');
+        const qty = parseInt(card.querySelector('.qty').value) || 1;
+        const name = e.target.dataset.name;
+        const price = parseFloat(e.target.dataset.price);
+        addToBasket(name, price, qty);
+      });
+    });
+
+    function addToBasket(name, price, qty){
+      const li = document.createElement('li');
+      li.innerHTML = `<b>${name}</b> × ${qty} — ₱${(price*qty).toFixed(2)} <span style="float:right"><a href="#" aria-label="remove" style="color:${getComputedStyle(document.documentElement).getPropertyValue('--pink-dark')}">Remove</a></span>`;
+      li.querySelector('a').addEventListener('click',(ev)=>{ev.preventDefault(); li.remove(); recalcTotals();});
+      basket.appendChild(li);
+      recalcTotals();
+    }
+
+    function recalcTotals(){
+      let count = 0, sub = 0;
+      [...basket.children].forEach(li=>{
+        const txt = li.textContent;
+        const match = txt.match(/×\s*(\d+)\s*—\s*₱([0-9.]+)/);
+        if(match){
+          count += parseInt(match[1]);
+          sub += parseFloat(match[2]);
+        }
+      });
+      const vat = sub * 0.12;
+      const total = sub + vat;
+      itemsCount.textContent = count;
+      subtotalEl.textContent = `₱${sub.toFixed(2)}`;
+      vatEl.textContent = `₱${vat.toFixed(2)}`;
+      totalEl.textContent = `₱${total.toFixed(2)}`;
+    }
+  </script></body>
+</html>
