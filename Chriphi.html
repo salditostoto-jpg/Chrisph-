@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dunkin Donut Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: url("lorie.png") no-repeat center/cover;
+    }
+
+    /* Header */
+    header {
+      background: #ff9900;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background: #ff66b2;
+      padding: 10px;
+    }
+    .navbar button,
+    .close,
+    form button {
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: .3s;
+    }
+    .navbar button {
+      margin: 0 10px;
+      background: #fff;
+    }
+    .navbar button:hover {
+      background: #ff3399;
+      color: #fff;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin: 30px;
+      padding: 60px 20px;
+      text-align: center;
+      background: rgba(255, 255, 255, .7);
+      border-radius: 20px;
+    }
+    .hero h1 {
+      color: #ff3399;
+    }
+
+    /* Popup Window */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding: 20px;
+      border: 3px solid #ff66b2;
+      border-radius: 15px;
+      z-index: 1000;
+      max-width: 800px;
+      width: 70%;
+      max-height: 80vh;
+      overflow: auto;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, .3);
+    }
+    .popup h2 {
+      text-align: center;
+      color: #ff66b2;
+    }
+    .popup img {
+      width: 150px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #ff66b2;
+    }
+
+    /* Close Button */
+    .close {
+      float: right;
+      background: #ff66b2;
+      color: #fff;
+    }
+    .close:hover,
+    form button:hover {
+      background: #ff3399;
+      color: #fff;
+    }
+
+    /* Overlay */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, .7);
+      z-index: 999;
+    }
+
+    /* Menu Grid */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    /* Forms */
+    form {
+      margin-top: 10px;
+    }
+    form input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🍩 Dunkin Donut Store ni Lorie 🍩</h1>
+  </header>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <button onclick="openPopup('home')">Home</button>
+    <button onclick="openPopup('menu')">Menu</button>
+    <button onclick="openPopup('order')">Order</button>
+    <button onclick="openPopup('franchise')">Franchise</button>
+    <button onclick="openPopup('about')">About Us</button>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Fresh Donuts & Coffee Everyday</h1>
+    <p><i><b>"Donuts and coffee taste sweet… but never sweeter than Ma’am!"</b></i></p>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closePopup()"></div>
+
+  <!-- Home Popup -->
+  <div id="home" class="popup">
+    <button class="close" onclick="closePopup()">X</button>
+    <h2>Home</h2>
+    <p>Welcome to Dunkin' Donut! Enjoy our freshly baked doughnuts and brewed coffee made with love daily. 🍩☕</p>
+  </div>
+
+  <!-- Menu Popup -->
+  <div id="menu" class="popup">
+    <button class="close" onclick="closePopup()">X</button>
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoaA7-liBKppcPwIncH9BPcb-DXxrpzfIFH_JdWtT4dBbj6xLeh7ZfDw&s=10">
+        <p>Chocolate Donut - ₱50</p>
+      </div>
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQCRQAlagW6oV8LoOUJWaq1QRPdqZNFmgdHSereP8y0RUn1KCNJ4MfZL4&s=10">
+        <p>Glazed Donut - ₱45</p>
+      </div>
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4grMisy4ghZG9qKC8AWsv6F08UFUF8cjkTA&s">
+        <p>Hot Coffee - ₱65</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Popup -->
+  <div id="order" class="popup">
+    <button class="close" onclick="closePopup()">X</button>
+    <h2>Place Your Order</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="text" placeholder="Item" required>
+      <input type="number" min="1" placeholder="Quantity" required>
+      <input type="text" placeholder="Total Price (manual)">
+      <button type="submit">Submit Order</button>
+    </form>
+  </div>
+
+  <!-- Franchise Popup -->
+  <div id="franchise" class="popup">
+    <button class="close" onclick="closePopup()">X</button>
+    <h2>Franchise Info</h2>
+    <p>Start your own Dunkin' Donut franchise! We provide: ✔ Training ✔ Marketing ✔ Recipes</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email" required>
+      <button type="submit">Apply Now</button>
+    </form>
+  </div>
+
+  <!-- About Us Popup -->
+  <div id="about" class="popup">
+    <button class="close" onclick="closePopup()">X</button>
+    <h2>About Us</h2>
+    <p>
+      Dunkin’ Donut has been serving smiles for decades. With every doughnut and coffee,
+      our mission is to spread joy and taste. Today, with thousands of branches worldwide,
+      we stay committed to freshness, quality, and happiness. 💖
+    </p>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    function openPopup(id) {
+      document.getElementById(id).style.display = 'block';
+      overlay.style.display = 'block';
+    }
+    function closePopup() {
+      document.querySelectorAll('.popup').forEach(p => p.style.display = 'none');
+      overlay.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
