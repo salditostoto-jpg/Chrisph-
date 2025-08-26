@@ -10,7 +10,7 @@
       background: url("lorie.png") no-repeat center/cover;
     }
 
-    /* Header */
+    
     header {
       background: #ff9900;
       padding: 15px;
@@ -18,7 +18,7 @@
       color: #fff;
     }
 
-    /* Navbar */
+   
     .navbar {
       display: flex;
       justify-content: center;
@@ -44,7 +44,7 @@
       color: #fff;
     }
 
-    /* Hero Section */
+   
     .hero {
       margin: 30px;
       padding: 60px 20px;
@@ -56,7 +56,7 @@
       color: #ff3399;
     }
 
-    /* Popup Window */
+   
     .popup {
       display: none;
       position: fixed;
@@ -86,7 +86,7 @@
       border: 2px solid #ff66b2;
     }
 
-    /* Close Button */
+    
     .close {
       float: right;
       background: #ff66b2;
@@ -98,7 +98,7 @@
       color: #fff;
     }
 
-    /* Overlay */
+   
     .overlay {
       display: none;
       position: fixed;
@@ -108,14 +108,14 @@
       z-index: 999;
     }
 
-    /* Menu Grid */
+    
     .menu-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
     }
 
-    /* Forms */
+    
     form {
       margin-top: 10px;
     }
@@ -130,12 +130,12 @@
 </head>
 <body>
 
-  <!-- Header -->
+ 
   <header>
     <h1>🍩 Dunkin Donut Store ni Lorie 🍩</h1>
   </header>
 
-  <!-- Navbar -->
+ 
   <div class="navbar">
     <button onclick="openPopup('home')">Home</button>
     <button onclick="openPopup('menu')">Menu</button>
@@ -144,23 +144,23 @@
     <button onclick="openPopup('about')">About Us</button>
   </div>
 
-  <!-- Hero Section -->
+  
   <div class="hero">
     <h1>Fresh Donuts & Coffee Everyday</h1>
     <p><i><b>"Donuts and coffee taste sweet… but never sweeter than Ma’am!"</b></i></p>
   </div>
 
-  <!-- Overlay -->
+ 
   <div id="overlay" class="overlay" onclick="closePopup()"></div>
 
-  <!-- Home Popup -->
+  
   <div id="home" class="popup">
     <button class="close" onclick="closePopup()">X</button>
     <h2>Home</h2>
     <p>Welcome to Dunkin' Donut! Enjoy our freshly baked doughnuts and brewed coffee made with love daily. 🍩☕</p>
   </div>
 
-  <!-- Menu Popup -->
+  
   <div id="menu" class="popup">
     <button class="close" onclick="closePopup()">X</button>
     <h2>Our Menu</h2>
@@ -180,7 +180,7 @@
     </div>
   </div>
 
-  <!-- Order Popup -->
+  
   <div id="order" class="popup">
     <button class="close" onclick="closePopup()">X</button>
     <h2>Place Your Order</h2>
@@ -193,7 +193,7 @@
     </form>
   </div>
 
-  <!-- Franchise Popup -->
+  
   <div id="franchise" class="popup">
     <button class="close" onclick="closePopup()">X</button>
     <h2>Franchise Info</h2>
@@ -205,7 +205,7 @@
     </form>
   </div>
 
-  <!-- About Us Popup -->
+ 
   <div id="about" class="popup">
     <button class="close" onclick="closePopup()">X</button>
     <h2>About Us</h2>
@@ -216,7 +216,7 @@
     </p>
   </div>
 
-  <!-- Scripts -->
+  
   <script>
     function openPopup(id) {
       document.getElementById(id).style.display = 'block';
