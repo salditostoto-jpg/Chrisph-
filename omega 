@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🍕 Pigzza Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to bottom, #fff3e6 0%, #fff9f5 50%, #ffe0cc 100%);
+    }
+    header {
+      background: url("https://t3.ftcdn.net/jpg/05/86/52/18/360_F_586521818_DVH8sEZ7nxWweKk3AB0rCtbCSZWXNgdF.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 25px;
+      color: white;
+      text-align: center;
+      border-bottom: 6px solid #ff9900;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 2.5em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 16px;
+      border: 2px solid white;
+      border-radius: 25px;
+      background: rgba(255, 153, 0, 0.8);
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: white;
+      color: #ff6600;
+      transform: scale(1.05);
+    }
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+    section {
+      padding: 70px 0;
+    }
+    h2 {
+      border-bottom: 4px solid #ff9900;
+      padding-bottom: 6px;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      color: #cc3300;
+      text-align: center;
+    }
+    .menu-title {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #ff6600;
+      margin: 50px 0 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    }
+    .menu-title span {
+      display: inline-block;
+      background: #fff7f0;
+      padding: 10px 20px;
+      border-radius: 15px;
+      border: 3px solid #ffbb66;
+    }
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 35px;
+    }
+    .menu li {
+      border-radius: 15px;
+      padding: 15px;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .menu li:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+    }
+    .menu img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #ffbb66;
+      margin-bottom: 12px;
+      transition: transform 0.1s ease;
+    }
+    .menu li:hover img {
+      transform: scale(1.05);
+    }
+    .menu button {
+      margin-top: 8px;
+      padding: 10px 16px;
+      background: #ff9900;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.1s ease;
+    }
+    .menu button:hover {
+      background: #ff6600;
+      transform: scale(1.05);
+    }
+    .basket {
+      border: 2px dashed #ffbb66;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fffaf2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: url("https://www.toptal.com/designers/subtlepatterns/uploads/wood_pattern.png");
+      background-size: cover;
+      color: white;
+      font-weight: bold;
+      border-top: 5px solid #ff6600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍕 Pigzza Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="#menu">Pizzas</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="menu-title"><span>🍕 Our Menu 🍕</span></div>
+
+    <section id="menu" class="menu">
+      <h2>Pizzas</h2>
+      <ul>
+        <li><img src="https://png.pngtree.com/thumb_back/fh260/background/20250707/pngtree-a-pepperoni-pizza-on-black-surface-with-blurred-lights-image_17600163.webp" alt="Pepperoni"><p>Pepperoni - ₱155</p><button onclick="addToBasket('Pepperoni',155)">Add</button></li>
+        <li><img src="https://bitingatthebits.com/wp-content/uploads/2025/04/pizza-toppings-e1745240249307.jpg" alt="Ham and Cheese"><p>Ham and Cheese - ₱200</p><button onclick="addToBasket('Ham and Cheese',200)">Add</button></li>
+        <li><img src="https://images.deliveryhero.io/image/fd-ph/LH/iv9s-listing.jpg" alt="Hawaiian"><p>Hawaiian - ₱220</p><button onclick="addToBasket('Hawaiian',220)">Add</button></li>
+        <li><img src="https://img.freepik.com/premium-photo/delicious-veggie-pizza-with-tomatoes-olives-mushrooms-generative-ai_742252-4688.jpg" alt="Veggie"><p>Veggie Pizza - ₱180</p><button onclick="addToBasket('Veggie Pizza',180)">Add</button></li>
+        <li><img src="https://static.toiimg.com/thumb/53110049.cms?width=1200&height=900" alt="Cheese Lovers"><p>Cheese Lovers - ₱190</p><button onclick="addToBasket('Cheese Lovers',190)">Add</button></li>
+        <li><img src="https://i.pinimg.com/736x/17/b1/60/17b160e1cf62fa0a4a31cf3e671f61b3.jpg" alt="BBQ Chicken"><p>BBQ Chicken - ₱210</p><button onclick="addToBasket('BBQ Chicken',210)">Add</button></li>
+      </ul>
+    </section>
+
+    <section id="order">
+      <h2>Your Basket</h2>
+      <ol class="basket" id="basket"></ol>
+      <p><b>Total:</b> ₱<span id="total">0</span></p>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p style="text-align:center; max-width:700px; margin:auto;">
+        Welcome to Pigzza Shop! 🍕<br>
+        We serve hot, cheesy, and delicious pizzas fresh from the oven.  
+        Our goal is to make every slice memorable — perfect for sharing with family and friends!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Pigzza Shop</p>
+  </footer>
+
+  <script>
+    let total = 0;
+    function addToBasket(item, price) {
+      const basket = document.getElementById("basket");
+      const li = document.createElement("li");
+      li.textContent = item + " - ₱" + price;
+      basket.appendChild(li);
+      total += price;
+      document.getElementById("total").textContent = total;
+    }
+  </script>
+</body>
+</html>
