@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>🌸 Until Dawn Café 🌙</title>
   <style>
-    
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -13,7 +13,7 @@
       scroll-behavior: smooth;
     }
 
-    
+
     #div1 {
       background: linear-gradient(135deg, #ff80aa, #ff4d94);
       color: white;
@@ -37,7 +37,7 @@
       font-style: italic;
     }
 
-    
+
     nav {
       background: white;
       text-align: center;
@@ -61,7 +61,7 @@
       color: white;
     }
 
-    
+
     #div2 {
       padding: 120px 20px 80px;
       text-align: center;
@@ -76,7 +76,8 @@
       margin-bottom: 30px;
       font-style: italic;
     }
-    .gif-frame {
+
+    #div8 {
       width: 80%;
       max-width: 800px;
       margin: 0 auto;
@@ -87,13 +88,13 @@
                   0 0 40px rgba(255, 182, 193, 0.4);
       background: white;
     }
-    .gif-frame img {
+    #div8 img {
       width: 100%;
       border-radius: 12px;
       display: block;
     }
-    
-    
+
+
     #div3 {
       padding: 80px 20px;
       background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
@@ -143,7 +144,7 @@
       font-size: 16px;
     }
 
-    
+
     #div4 {
       padding: 80px 20px;
       text-align: center;
@@ -160,8 +161,8 @@
       font-size: 18px;
       line-height: 1.6;
     }
-    
-  
+
+
     #div5 {
       padding: 80px 20px;
       text-align: center;
@@ -180,13 +181,13 @@
 </head>
 <body>
 
-  
+
   <div id="div1">
     <h1>🌸 Until Dawn Café 🌙</h1>
     <p>"Where every morning begins"</p>
   </div>
 
- 
+
   <nav>
     <a href="#div2">Home</a>
     <a href="#div3">Menu</a>
@@ -198,7 +199,7 @@
   <div id="div2">
     <h2>Welcome to Until Dawn Café</h2>
     <p>“Feel the cozy vibes of a Korean café — enjoy sweet desserts, sip your favorite coffee, and get K-pop photocards.”</p>
-    <div class="gif-frame">
+    <div id="div8">
       <img src="https://media.giphy.com/media/FWtVYDHIxgGgE/giphy.gif" alt="Cafe GIF">
     </div>
   </div>
@@ -262,14 +263,14 @@
     </div>
   </div>
 
-  
+
   <div id="div4">
     <h2>About Us</h2>
     <p>🌸 Until Dawn Café 🌙 is a cozy Korean-inspired coffee shop.<br>
        We serve drinks, desserts, and K-pop photocards to give fans the feeling of being in Korea. 💖</p>
   </div>
 
-  
+
   <div id="div5">
     <h2>Contact Us</h2>
     <p>📍 Seoul Street, Manila</p>
