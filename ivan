@@ -1,165 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>SUPER IVAN MALL</title>
+  <meta charset="utf-8" />
+  <title>SUPER IVAN MALL - Cartoon Pastel</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; scroll-padding-top: 150px; }
-    body { margin: 0; font-family: Arial, sans-serif; background: #f5f5f5; padding-top: 100px; }
-
-  
-    nav { background: #004080; padding: 10px; text-align: center; position: fixed; top: 0; left: 0; width: 100%; z-index: 999; }
-    nav a img { height: 40px; margin: 0 15px; vertical-align:middlet; transition: .3s; }
-    nav a:hover img { transform: scale(1.1); }
-
-    
-    .div2 { max-width: 1200px; height: 350px; margin: 0 auto 60px; border-radius: 20px; overflow: hidden; position: relative;
-      box-shadow: 0 6px 18px rgba(0,0,0,.3); background: url("https://media.giphy.com/media/LKb0yYa9Y7LsZlU4x3/giphy.gif") center/cover; }
-    .banner-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,33,71,.6), rgba(0,64,128,.3)); }
-    .banner-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); color: #fff; text-align: center; }
-    .banner-text h1 { font-size: 48px; margin: 0; text-transform: uppercase; letter-spacing: 3px; }
-    .banner-text p { margin: 10px 0 0; font-size: 20px; font-style: italic; }
+    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+    body {
+      margin: 0;
+      font-family: "Baloo 2", "Segoe UI", Arial, sans-serif;
+      background: #fff6fb;
+      color: #24303a;
+      padding-top: 88px;
+    }
 
     
-    .div3 { padding: 40px 20px; }
-    .div4 { text-align: center; jmargin-bottom: 30px; }
-    .div4 img { height: 80px; display: block; margin: 0 auto 10px; }
-    .div4 h2 { margin: 0; font-size: 28px; color: #002147; text-transform: uppercase; letter-spacing: 2px; }
+    #div1 {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: flex;
+      gap: 10px;
+      background: linear-gradient(180deg,#ffeef6,#ffdff0);
+      padding: 10px 14px;
+      border-radius: 28px;
+      box-shadow: 0 6px 22px rgba(34,34,34,.12);
+      border: 2px solid rgba(0,0,0,0.03);
+      align-items: center;
+    }
+    #div1 a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 22px;
+      transition: transform .18s ease, box-shadow .18s ease;
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 6px 14px rgba(0,0,0,.06);
+    }
+    #div1 a:hover { transform: translateY(-6px) scale(1.05); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
 
-  
-    .products {
+    
+    #div2 {
+      max-width: 1100px;
+      margin: 10px auto 26px;
+      height: 320px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: url("https://media.giphy.com/media/LKb0yYa9Y7LsZlU4x3/giphy.gif") center/cover no-repeat;
+      box-shadow: 0 12px 36px rgba(34,34,34,.12);
+      border: 3px solid rgba(255,255,255,0.6);
+    }
+    .div-cute {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(0,0,0,0.18));
+    }
+    .div-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      color: #fff;
+      text-shadow: 0 8px 26px rgba(0,0,0,.45);
+      padding: 8px 18px;
+    }
+    .div-title h1 { margin: 0; font-size: 42px; letter-spacing: 2px; }
+    .div-title p { margin: 8px 0 0; font-size: 15px; opacity:.95; font-style:italic; }
+
+    
+    .div-angpogi {
+      max-width: 1100px;
+      margin: 18px auto;
+      background: transparent;
+      border-radius: 14px;
+      padding: 12px;
+    }
+    .div-pogi {
+      background: linear-gradient(180deg,#ffffff,#fffbff);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 8px 20px rgba(20,20,20,.04);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .div-head {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .cutiee {
+      width: 72px;
+      height: 72px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+      border: 1px dashed rgba(0,0,0,0.04);
+      background: #fff;
+    }
+    .div-head h2 { margin: 0; font-size: 20px; color: #133049; text-transform: uppercase; letter-spacing: 1px; }
+    .div-head p { margin: 4px 0 0; color: #59707c; font-size: 13px; }
+
+    .cv2 {
+    
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 items per row sa desktop */
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
     }
 
-      {
-      .products {
-        grid-template-columns: repeat(2, 1fr); 
-      }
+    
+    .div5 {
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+      min-height: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 8px 18px rgba(0,0,0,.04);
+      border: 1px solid rgba(0,0,0,0.03);
+      background: #fff;
     }
-
-   {
-      .products {
-        grid-template-columns: 1fr; 
-      }
+    .div5 img {
+      width: 76px;
+      height: 76px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0,0,0,.06);
+      margin-bottom: 8px;
     }
+    .div5 h3 { margin: 8px 0 4px; font-size: 16px; color:#132935; }
+    .div5 p { margin: 0 0 6px; font-weight:700; color:#3b3b3b; }
 
-    .div5{ background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,.2); text-align: center; transition: .3s; padding-bottom: 15px; overflow: hidden; }
-    .div5:hover { transform: scale(1.08); }
-    .div5 img { width: 100%; height: 150px; object-fit: cover; }
-    .div h3 { margin: 10px 0 5px; font-size: 18px; }
-    .div5 p { margin: 0; font-size: 15px; color: #333; }
+    
+    #div3 .div-pogi { background: linear-gradient(180deg,#fff5f6,#fff0f0); border-left: 6px solid #ff9b9b; }
+    #div4 .div-pogi { background: linear-gradient(180deg,#fffdf5,#fff9e0); border-left: 6px solid #ffe68f; }
+    #div5 .div-pogi { background: linear-gradient(180deg,#fbf5ff,#f6f0ff); border-left: 6px solid #e2ccff; }
+    #div6 .div-pogi { background: linear-gradient(180deg,#f9fff0,#f1ffda); border-left: 6px solid #dff7a8; }
+    #div7 .div-pogi { background: linear-gradient(180deg,#fff4f7,#ffeef2); border-left: 6px solid #ffd6de; }
+    #div8 .div-pogi { background: linear-gradient(180deg,#fff9f2,#fff4ea); border-left: 6px solid #ffdfc2; }
+    #div9 .div-pogi { background: linear-gradient(180deg,#f3fff7,#e6fff0); border-left: 6px solid #bff0c2; }
+
+  
+    #div10 {
+      max-width: 1100px;
+      margin: 24px auto 60px;
+      text-align: center;
+      padding: 18px;
+      border-radius: 12px;
+      background: linear-gradient(90deg,#ffdff0,#e6f7ff);
+      box-shadow: 0 10px 30px rgba(34,34,34,.08);
+      border: 1px solid rgba(0,0,0,0.04);
+      color: #2b3a45;
+    }
+    
   </style>
 </head>
 <body>
 
-
-<nav>
-  <a href="#jollibee"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSbawn3bhiRX2hp6tAJXqxD2r-2DHXBcz8g8YRw1z7Fg&s=10"></a>
-  <a href="#mcdo"><img src="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-logo.png"></a>
-  <a href="#chowking"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDSfKSZA5UQOk5XfClFvW3dREPkFxayltT0Lm1_VWciA&s=10"></a>
-  <a href="#inasal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNOJK945ktKpKlBcq8L22GSuDIv8kFQOLcp1u6KJpZg&s=10"></a>
-  <a href="#kfc"><img src="https://1000logos.net/wp-content/uploads/2017/03/Kfc_logo.png"></a>
-  <a href="#greenwich"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStVc49wvRGHGFKHZgaAP7l_3HLsIEZnc4v4HEZUGK_BA&s=10"></a>
-  <a href="#starbucks"><img src="https://i.pinimg.com/564x/e8/1d/a9/e81da954fa5d35378cf4153f0dd47558.jpg"></a>
-</nav>
-
-
-<div class="div2">
-  <div class="banner-overlay"></div>
-  <div class="banner-text"><h1>SUPER IVAN MALL</h1><p>The Mall The Merrier!</p></div>
-</div>
-
-<div id="jollibee" class="div3">
-  <div class="div4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSbawn3bhiRX2hp6tAJXqxD2r-2DHXBcz8g8YRw1z7Fg&s=10"><h2>JOLLIBEE</h2></div>
-  <div class="products">
-    <div class="div5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXlq_aoK9uPqMul7EFjgosRV2wDAqwx-zXEsVWwj3P9w&s=10"><h3>Chickenjoy</h3><p>₱95</p></div>
-    <div class="div5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEqgFErCH3imHcEFRKP12ucFYh5aQzV9nZnvc4VCDCpQ&s=10"><h3>Jolly Spaghetti</h3><p>₱60</p></div>
-    <div class="div5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaKoT4tTMenLYUtX3Ppk2qVS3sEYS30Uxypa8v1y_dpg&s=10"><h3>Jolly Hotdog</h3><p>₱55</p></div>
-    <div class="div5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR5fI5L4CBWCM7rxclIROF3zEENbnYJYipg-euYhPNtg&s=10"><h3>Yumburger</h3><p>₱40</p></div>
-    <div class="div5"><img src="https://www.jollibeefoods.com/cdn/shop/products/halo-halo.png"><h3>Halo-Halo</h3><p>₱65</<<<<<<<p></div>
-    <div class="div5"><img src="https://www.jollibeefoods.com/cdn/shop/products/Palabok.png"><h3>Palabok</h3><p>₱70</p></div>
+  
+  <div id="div1">
+    <a href="#div2" title="Home">🏠</a>
+    <a href="#div3" title="Jollibee">🍗</a>
+    <a href="#div4" title="McDonald's">🍔</a>
+    <a href="#div5" title="Chowking">🥡</a>
+    <a href="#div6" title="Mang Inasal">🔥</a>
+    <a href="#div7" title="KFC">🍟</a>
+    <a href="#div8" title="Greenwich">🍕</a>
+    <a href="#div9" title="Starbucks">☕</a>
   </div>
-</div>
 
-
-<div id="mcdo" class="div3">
-  <div class="div4"><img src="https://1000logos.net/wp-content/uploads/2017/03/McDonalds-logo.png"><h2>MCDONALD'S</h2></div>
-  <div class="products">
-    <div class="div5"><img src="https://mcdonalds.com.ph/storage/McChicken.png"><h3>McChicken</h3><p>₱120</p></div>
-    <div class="div5"><img src="https://mcdonalds.com.ph/storage/BigMac.png"><h3>Big Mac</h3><p>₱150</p></div>
-    <div class="div5"><img src="https://mcdonalds.com.ph/storage/Cheeseburger.png"><h3>Cheeseburger</h3><p>₱80</p></div>
-    <div class="div5"><img src="https://mcdonalds.com.ph/storage/Fries.png"><h3>French Fries</h3><p>₱65</p></div>
-    <div class="div5"><img src="https://mcdonalds.com.ph/storage/Sundae.png"><h3>Sundae</h3><p>₱45</p></div>
-    <div class="div5"><img src="https://mcdonalds.com.ph/storage/McFloat.png"><h3>McFloat</h3><p>₱55</p></div>
+  
+  <div id="div2">
+    <div class="div-cute"></div>
+    <div class="div-title">
+      <h1>SUPER IVAN MALL</h1>
+      <p>All your favorites in one cute spot!</p>
+    </div>
   </div>
-</div>
 
-
-<div id="chowking" class="div3">
-  <div class="div4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDSfKSZA5UQOk5XfClFvW3dREPkFxayltT0Lm1_VWciA&s=10"><h2>CHOWKING</h2></div>
-  <div class="products">
-    <div class="div5"><img src="https://chowkingdelivery.com.ph/media/catalog/product/s/i/siopao.jpg"><h3>Siopao</h3><p>₱50</p></div>
-    <div class="div5"><img src="https://chowkingdelivery.com.ph/media/catalog/product/h/a/halo-halo.jpg"><h3>Halo-halo</h3><p>₱80</p></div>
-    <div class="div5"><img src="https://chowkingdelivery.com.ph/media/catalog/product/l/a/lumpia.jpg"><h3>Lumpia</h3><p>₱70</p></div>
-    <div class="div5"><img src="https://chowkingdelivery.com.ph/media/catalog/product/f/r/fried-chicken.jpg"><h3>Fried Chicken</h3><p>₱120</p></div>
-    <div class="div5"><img src="https://chowkingdelivery.com.ph/media/catalog/product/c/h/chinese-style-fried-rice.jpg"><h3>Fried Rice</h3><p>₱90</p></div>
-    <div class="div5"><img src="https://chowkingdelivery.com.ph/media/catalog/product/s/h/shanghai-lauriat.jpg"><h3>Shanghai Lauriat</h3><p>₱150</p></div>
+  
+  <div id="div3" class="angpogi">
+    <div class="div-pogi">
+      <div class="div-head">
+        <div class="cutiee">🍗</div>
+        <div><h2>Jollibee</h2><p>Crispylicious, juicylicious!</p></div>
+      </div>
+      <div class="cv2">
+        <div class="div5"><img src="https://i.ibb.co/9wWqvWY/chickenjoy.jpg"><h3>Chickenjoy</h3><p class="price-tag">₱95</p></div>
+        <div class="div5"><img src="https://i.ibb.co/4K7y5Hv/spaghetti.jpg"><h3>Jolly Spaghetti</h3><p class="price-tag">₱60</p></div>
+        <div class="div5"><img src="https://i.ibb.co/jZvHg3V/yumburger.jpg"><h3>Yumburger</h3><p class="price-tag">₱45</p></div>
+      </div>
+    </div>
   </div>
-</div>
 
-
-<div id="inasal" class="div3">
-  <div class="div4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqNOJK945ktKpKlBcq8L22GSuDIv8kFQOLcp1u6KJpZg&s=10"><h2>MANG INASAL</h2></div>
-  <div class="products">
-    <div class="div5"><img src="https://manginasal.com/wp-content/uploads/Chicken-Inasal-Paa-Large.png"><h3>Chicken Inasal Paa</h3><p>₱99</p></div>
-    <div class="div5"><img src="https://manginasal.com/wp-content/uploads/Pork-BBQ-2-Sticks.png"><h3>Pork BBQ</h3><p>₱75</p></div>
-    <div class="div5"><img src="https://manginasal.com/wp-content/uploads/Bangus-Sisig.png"><h3>Bangus Sisig</h3><p>₱140</p></div>
-    <div class="div5"><img src="https://manginasal.com/wp-content/uploads/Palabok.png"><h3>Palabok</h3><p>₱65</p></div>
-    <div class="div5"><img src="https://manginasal.com/wp-content/uploads/Halo-halo.png"><h3>Halo-halo</h3><p>₱75</p></div>
-    <div class="div5"><img src="https://manginasal.com/wp-content/uploads/Kare-Kare.png"><h3>Kare-Kare</h3><p>₱160</p></div>
+  
+  <div id="div4" class="angpogi">
+    <div class="div-pogi">
+      <div class="div-head">
+        <div class="cutiee">🍔</div>
+        <div><h2>McDonald's</h2><p>Love ko 'to!</p></div>
+      </div>
+      <div class="cv2">
+        <div class="div5"><img src="https://i.ibb.co/LtNwFh2/bigmac.jpg"><h3>Big Mac</h3><p class="price-tag">₱150</p></div>
+        <div class="div5"><img src="https://i.ibb.co/BcRChLk/mcspaghetti.jpg"><h3>McSpaghetti</h3><p class="price-tag">₱70</p></div>
+        <div class="div5"><img src="https://i.ibb.co/1Z0Zwzn/mcflurry.jpg"><h3>McFlurry</h3><p class="price-tag">₱55</p></div>
+      </div>
+    </div>
   </div>
-</div>
 
-
-<div id="kfc" class="div3">
-  <div class="div4"><img src="https://1000logos.net/wp-content/uploads/2017/03/Kfc_logo.png"><h2>KFC</h2></div>
-  <div class="products">
-    <div class="div5"><img src="https://kfcdelivery.com.ph/Content/Images/Menu/chicken-bucket.png"><h3>Bucket Meal</h3><p>₱550</p></div>
-    <div class="div5"><img src="https://kfcdelivery.com.ph/Content/Images/Menu/zingerm.png"><h3>Zinger</h3><p>₱120</p></div>
-    <div class="div5"><img src="https://kfcdelivery.com.ph/Content/Images/Menu/spaghetti.png"><h3>Spaghetti</h3><p>₱60</p></div>
-    <div class="div5"><img src="https://kfcdelivery.com.ph/Content/Images/Menu/mashed-potato.png"><h3>Mashed Potato</h3><p>₱50</p></div>
-    <div class="div5"><img src="https://kfcdelivery.com.ph/Content/Images/Menu/coleslaw.png"><h3>Coleslaw</h3><p>₱45</p></div>
-    <div class="div5"><img src="https://kfcdelivery.com.ph/Content/Images/Menu/krushers.png"><h3>Krushers</h3><p>₱70</p></div>
+  
+  <div id="div5" class="angpogi">
+    <div class="div-pogi">
+      <div class="div-head">
+        <div class="cutiee">🥡</div>
+        <div><h2>Chowking</h2><p>Chinese-style favorites!</p></div>
+      </div>
+      <div class="cv2">
+        <div class="div5"><img src="https://i.ibb.co/Nj8sQqK/chowfan.jpg"><h3>Chao Fan</h3><p class="price-tag">₱85</p></div>
+        <div class="div5"><img src="https://i.ibb.co/GtLbwx6/siopao.jpg"><h3>Siopao</h3><p class="price-tag">₱35</p></div>
+        <div class="div5"><img src="https://i.ibb.co/V9LPTkL/lomi.jpg"><h3>Lomi</h3><p class="price-tag">₱95</p></div>
+      </div>
+    </div>
   </div>
-</div>
 
-
-<div id="greenwich" class="div3">
-  <div class="div4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStVc49wvRGHGFKHZgaAP7l_3HLsIEZnc4v4HEZUGK_BA&s=10"><h2>GREENWICH</h2></div>
-  <div class="products">
-    <div class="div5"><img src="https://greenwich.com.ph/wp-content/uploads/Overload-Pizza.png"><h3>Overload Pizza</h3><p>₱299</p></div>
-    <div class="div5"><img src="https://greenwich.com.ph/wp-content/uploads/Lasagna.png"><h3>Lasagna</h3><p>₱120</p></div>
-    <div class="div5"><img src="https://greenwich.com.ph/wp-content/uploads/Carbonara.png"><h3>Carbonara</h3><p>₱110</p></div>
-    <div class="div5"><img src="https://greenwich.com.ph/wp-content/uploads/Mocha-Sundae.png"><h3>Fried Chicken</h3><p>₱160</p></div>
-    <div class="div5"><img src="https://greenwich.com.ph/wp-content/uploads/Mocha-Sundae.png"><h3>Mocha Sundae</h3><p>₱60</p></div>
-    <div class="div5"><img src="https://greenwich.com.ph/wp-content/uploads/Onion-Rings.png"><h3>Onion Rings</h3><p>₱70</p></div>
+  
+  <div id="div6" class="angpogi">
+    <div class="div-pogi">
+      <div class="div-head">
+        <div class="cutiee">🔥</div>
+        <div><h2>Mang Inasal</h2><p>Unli rice, unli saya!</p></div>
+      </div>
+      <div class="cv2">
+        <div class="div5"><img src="https://i.ibb.co/XWgRL1J/inasal.jpg"><h3>Paa Inasal</h3><p class="price-tag">₱120</p></div>
+        <div class="div5"><img src="https://i.ibb.co/zrRcYfg/porkbbq.jpg"><h3>Pork BBQ</h3><p class="price-tag">₱45</p></div>
+        <div class="div5"><img src="https://i.ibb.co/ctVFFcz/halo-halo.jpg"><h3>Halo-Halo</h3><p class="price-tag">₱85</p></div>
+      </div>
+    </div>
   </div>
-</div>
 
-
-<div id="starbucks" class="div3">
-  <div class="div4"><img src="https://i.pinimg.com/564x/e8/1d/a9/e81da954fa5d35378cf4153f0dd47558.jpg"><h2>STARBUCKS</h2></div>
-  <div class="products">
-    <div class="div5"><img src="https://i.ibb.co/6wKNGPg/caramelmacchiato.jpg"><h3>Caramel Macchiato</h3><p>₱180</p></div>
-    <div class="div5"><img src="https://i.ibb.co/YZrxmxL/javachip.jpg"><h3>Java Chip Frappe</h3><p>₱200</p></div>
-    <div class="div5"><img src="https://i.ibb.co/p0D88Tf/coldbrew.jpg"><h3>Cold Brew</h3><p>₱170</p></div>
-    <div class="div5"><img src="https://i.ibb.co/9nhf9rH/greenteafrappe.jpg"><h3>Green Tea Frappe</h3><p>₱190</p></div>
-    <div class="div5"><img src="https://i.ibb.co/Wk4D7kK/blueberrymuffin.jpg"><h3>Blueberry Muffin</h3><p>₱95</p></div>
-    <div class="div5"><img src="https://globalassets.starbucks.com/digitalassets/products/food/SBX20190513_ChocolateCake.jpg"><h3>Chocolate Cake</h3><p>₱150</p></div>
+  
+  <div id="div7" class="angpogi">
+    <div class="div-pogi">
+      <div class="div-head">
+        <div class="cutiee">🍟</div>
+        <div><h2>KFC</h2><p>Finger lickin’ good!</p></div>
+      </div>
+      <div class="cv2">
+        <div class="div5"><img src="https://i.ibb.co/NmSZXcp/kfcchicken.jpg"><h3>Bucket Meal</h3><p class="price-tag">₱499</p></div>
+        <div class="div5"><img src="https://i.ibb.co/42ZcLrQ/kfcrice.jpg"><h3>Famous Bowl</h3><p class="price-tag">₱95</p></div>
+        <div class="div5"><img src="https://i.ibb.co/jhm0wM7/kfcburger.jpg"><h3>Zinger Burger</h3><p class="price-tag">₱120</p></div>
+      </div>
+    </div>
   </div>
-</div>
+
+  
+  <div id="div8" class="angpogi">
+    <div class="div-pogi">
+      <div class="div-head">
+        <div class="cutiee">🍕</div>
+        <div><h2>Greenwich</h2><p>Overloaded goodness!</p></div>
+      </div>
+      <div class="cv2">
+        <div class="div5"><img src="https://i.ibb.co/s3n9nVY/pizza.jpg"><h3>Overload Pizza</h3><p class="price-tag">₱250</p></div>
+        <div class="div5"><img src="https://i.ibb.co/7CN8cZP/pasta.jpg"><h3>Lasagna Supreme</h3><p class="price-tag">₱120</p></div>
+        <div class="div5"><img src="https://i.ibb.co/sKpX5Gm/chickens.jpg"><h3>Barkada Chicken</h3><p class="price-tag">₱499</p></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="div9" class="angpogi">
+    <div class="div-pogi">
+      <div class="div-head">
+        <div class="cutiee">☕</div>
+        <div><h2>Starbucks</h2><p>Every sip feels special.</p></div>
+      </div>
+      <div class="cv2">
+        <div class="div5"><img src="https://i.ibb.co/BZtqW2d/frap.jpg"><h3>Frappuccino</h3><p class="price-tag">₱175</p></div>
+        <div class="div5"><img src="https://i.ibb.co/q5gb68z/latte.jpg"><h3>Caffè Latte</h3><p class="price-tag">₱150</p></div>
+        <div class="div5"><img src="https://i.ibb.co/QfmvM7c/croissant.jpg"><h3>Croissant</h3><p class="price-tag">₱95</p></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="div10">
+    © 2025 SUPER IVAN MALL — The Mall The Merrier! 🎉 🛍️
+  </div>
 
 </body>
 </html>
