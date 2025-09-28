@@ -29,8 +29,8 @@
       margin: 0;
       font-size: 50px;
       font-family: cursive;
-      text-decoration: none; /* no underline */
-      text-shadow: 0 0 8px #ffb6c1, 0 0 16px #ff4da6, 0 0 24px #ff80bf; /* glow effect */
+      text-decoration: none; 
+      text-shadow: 0 0 8px #ffb6c1, 0 0 16px #ff4da6, 0 0 24px #ff80bf; 
     }
     #div1 p {
       margin: 8px 0 0;
