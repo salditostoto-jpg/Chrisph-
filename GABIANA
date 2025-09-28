@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 Until Dawn Café 🌙</title>
+  <style>
+    /* GENERAL */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #cc3366, #ff99cc); /* Dark sakura pink gradient */
+      color: #3e003e;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER / LOGO */
+    #div1 {
+      background: linear-gradient(135deg, #ff80aa, #ff4d94);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom: 6px solid pink;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    #div1 h1 {
+      margin: 0;
+      font-size: 50px;
+      font-family: cursive;
+      text-decoration: none; /* no underline */
+      text-shadow: 0 0 8px #ffb6c1, 0 0 16px #ff4da6, 0 0 24px #ff80bf; /* glow effect */
+    }
+    #div1 p {
+      margin: 8px 0 0;
+      font-style: italic;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: white;
+      text-align: center;
+      padding: 12px;
+      border-bottom: 3px solid pink;
+      position: sticky;
+      top: 140px;
+      z-index: 1000;
+    }
+    nav a {
+      color: #ff4fa3;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      padding: 8px 12px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: pink;
+      color: white;
+    }
+
+    /* HOME */
+    #div2 {
+      padding: 120px 20px 80px;
+      text-align: center;
+    }
+    #div2 h2 {
+      font-size: 42px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 15px;
+    }
+    #div2 p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+    .gif-frame {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 15px;
+      border: 8px solid #ffb6c1;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.6),
+                  0 0 40px rgba(255, 182, 193, 0.4);
+      background: white;
+    }
+    .gif-frame img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+    
+    
+    #div3 {
+      padding: 80px 20px;
+      background: linear-gradient(to bottom, #ffe6f0, #fff0f5);
+      text-align: center;
+    }
+    #div3 h2 {
+      font-size: 38px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+    }
+    .menu-group {
+      margin-bottom: 50px;
+    }
+    .menu-group h3 {
+      font-size: 28px;
+      color: #b30059;
+      margin-bottom: 20px;
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    .div-item {
+      width: 240px;
+      background: rgba(255,255,255,0.7);
+      border: 2px solid #ffb6c1;
+      border-radius: 18px;
+      padding: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .div-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px pink;
+    }
+    .div-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .div-item p {
+      margin: 8px 0;
+      font-size: 16px;
+    }
+
+    
+    #div4 {
+      padding: 80px 20px;
+      text-align: center;
+      background: white;
+    }
+    #div4 h2 {
+      font-size: 36px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+    #div4 p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    
+  
+    #div5 {
+      padding: 80px 20px;
+      text-align: center;
+      background: #ffe6f0;
+    }
+    #div5 h2 {
+      font-size: 36px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+    }
+    #div5 p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div id="div1">
+    <h1>🌸 Until Dawn Café 🌙</h1>
+    <p>"Where every morning begins"</p>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#div2">Home</a>
+    <a href="#div3">Menu</a>
+    <a href="#div4">About</a>
+    <a href="#div5">Contact</a>
+  </nav>
+
+
+  <div id="div2">
+    <h2>Welcome to Until Dawn Café</h2>
+    <p>“Feel the cozy vibes of a Korean café — enjoy sweet desserts, sip your favorite coffee, and get K-pop photocards.”</p>
+    <div class="gif-frame">
+      <img src="https://media.giphy.com/media/FWtVYDHIxgGgE/giphy.gif" alt="Cafe GIF">
+    </div>
+  </div>
+
+
+  <div id="div3">
+    <h2>Our Menu</h2>
+
+    <div class="menu-group">
+      <h3>Drinks</h3>
+      <div class="menu">
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVLt8eKkPz4KMlJsQ_XNibOcJynTT7XTBwb6HvpI7OaQ&s=10" alt="Strawberry Latte">
+          <p><b>Strawberry Latte</b><br>₱250</p>
+        </div>
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNPgw3hfvC-Yto8vHtW4Ezk-qvRNhiUW4XuAybNzAzOw&s=10" alt="Matcha Latte">
+          <p><b>Matcha Latte</b><br>₱300</p>
+        </div>
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyxNMR3tm5FDKYmJnAQTJfbQkVWnSHKuqiA-aZA-F3iw&s=10" alt="Caramel Macchiato">
+          <p><b>Caramel Macchiato</b><br>₱350</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <h3>Desserts</h3>
+      <div class="menu">
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlWd30qt2Jj_BWTZo3X4rIhg6ZMXpBdYgx8U55owaYjQ&s=10" alt="Cheesecake">
+          <p><b>Cheesecake</b><br>₱200</p>
+        </div>
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjza69XZAh4m7LIqK3v0hZjyVIr0o2gwvZMTC6h0ErAw&s=10" alt="Tiramisu">
+          <p><b>Tiramisu</b><br>₱250</p>
+        </div>
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeP0ZSlq5PmmTtZMkHNzWXahb_E3Z2uoF8rkjns8BS0w&s=10" alt="Macarons">
+          <p><b>Macarons</b><br>₱180</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-group">
+      <h3>K-pop Photocards</h3>
+      <div class="menu">
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOafsOjvqWtnIrxVF7NZwpesSA0w4vDA47ltMpnSIuUA&s=10" alt="BTS Photocard">
+          <p><b>BTS Photocard</b><br>₱1500</p>
+        </div>
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUxRIQ4__KnXYHMxgL04ey2NM1D25F3yVKU416BZ89dQ&s=10" alt="Blackpink Photocard">
+          <p><b>Blackpink Photocard</b><br>₱1600</p>
+        </div>
+        <div class="div-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5jgLjPmBTt5XLyctX9g-7ocMgXJT8kRpl_yQKgVNrlQ&s=10" alt="EXO Photocard">
+          <p><b>EXO Photocard</b><br>₱1400</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="div4">
+    <h2>About Us</h2>
+    <p>🌸 Until Dawn Café 🌙 is a cozy Korean-inspired coffee shop.<br>
+       We serve drinks, desserts, and K-pop photocards to give fans the feeling of being in Korea. 💖</p>
+  </div>
+
+  
+  <div id="div5">
+    <h2>Contact Us</h2>
+    <p>📍 Seoul Street, Manila</p>
+    <p>📞 0912-345-6789</p>
+    <p>📧 untildawncafe@email.com</p>
+  </div>
+
+</body>
+</html>
