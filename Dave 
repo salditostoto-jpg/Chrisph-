@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>☕︎DAVE COFFEE SHOP</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet"> 
+
+	<style>	
+		     body{
+         margin: 0;
+         font-family: Roboto, sans-serif;
+         background-color: #F2EAD3;
+         color: black;
+         scroll-behavior: smooth;
+        } 
+
+        header {
+         font-family: Pacifico, cursive;
+         background-color: #D1D3D4;
+         color: #44444E;
+         padding: 20px;
+         text-align: center;
+         position: sticky;
+         top: 0;
+         z-index: 1000;
+         box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+         margin: 0;
+         font-size: 40px;
+	      }
+
+        nav {
+          background-color: #7a554e;
+          padding: 10px 0;
+          text-align: center;
+          position: sticky;
+          z-index: 1000;
+          top: 140px;
+        }
+
+        .btn{
+         margin: 10px;
+         background: #B17F59;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         font-size: 15px;
+         border-radius: 50px;
+         cursor: pointer;
+         transition: background 0.3s;
+         text-decoration: none;
+         display: inline-block;  
+         font-weight: bold;       
+        } 
+
+         .btn:hover {
+         background-color: #8B5E3C;
+       }
+
+       div {  
+         padding: 60px 20px;  
+         text-align: center;      
+        } 
+
+        #home{
+          background-image: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');   
+          background-size: cover; 
+          background-position: center; 
+          color: white; 
+          height: 90vh; 
+          display: flex; 
+          align-items: center; 
+          justify-content: center; 
+          text-align: center; 
+          padding: 40px;
+        }
+        .home-item{
+          background-color: rgba(0, 0, 0, 0.5); 
+          padding: 30px; 
+          border-radius: 15px; 
+          max-width: 700px;
+        }
+        .home-item h2{
+          font-size: 45px; 
+          margin-bottom: 20px; 
+          font-family: 'Pacifico', cursive;
+        }
+        .home-item p{
+          font-size: 18px; 
+          margin-bottom: 30px;
+        }
+        
+
+        .menu-item {
+         display: inline-block;
+         background: white;
+         margin: 15px;
+         padding: 20px;
+         width: 220px;
+         border-radius: 10px;
+         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+         vertical-align: top;
+         transition: transform 0.2s;      
+        }
+
+        .menu-item:hover {
+         transform: scale(1.05);
+         box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+
+        .menu-item img {
+         width: 200px;
+         height: 200px;
+         object-fit: cover;
+         border-radius: 10px;
+        }
+
+        #menu h2, #about h2, #contact h2 {
+          font-size: 32px;
+          margin-bottom: 30px;
+          font-family: Arial, cursive;
+
+	</style>
+</head>
+<body>
+
+	<header>
+      <h1>☕︎DAVE COFFEE SHOP</h1>
+      <p>“Fresh Coffee, Fresh Start”</p>
+    </header>
+     
+    <nav>
+      <a href="#home" class="btn">Home</a>
+      <a href="#menu" class="btn">Menu</a>
+      <a href="#about" class="btn">About</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+
+    <div id="home">
+      <div class="home-item">
+
+        <h2>Welcome to Dave Coffee Shop</h2>
+        <p>Start your day right with our freshly brewed coffee, cozy ambiance, and a taste of happiness in every sip.</p>
+        </div>
+
+    </div>
+    
+    <div id="menu">
+      <h2>Menu</h2>
+      <div class="menu-item">
+      	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7gwOYB6MeAp9xidAzjDvc9iSnSMkIuvJHlw&s"alt="Cappuccino">
+        <h3>Cappuccino</h3>
+        <p>Rich. Creamy. Unforgettable.</p>
+        <p><strong>₱125</strong></p>  
+        </div>
+
+        <div class="menu-item">
+          <img src="https://th.bing.com/th/id/OIP.Fm04M5hJbmELYJYrWQJMbQHaDz?w=266&h=179&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+          <h3>Macchiato</h3>
+          <p>Deep, smooth, kissed with cream.</p>
+          <p><strong>₱100</strong></p>
+          </div>
+
+        <div class="menu-item">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDh5Wvp_7Gw7P0COx3IO7hmb8D4-wqiHrtFQ&s">
+          <h3>Americano</h3>
+          <p>Bold. Black. Pure Coffee.</p>
+          <p><strong>₱165</strong></p>
+        </div> 
+
+      </div>
