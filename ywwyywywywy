@@ -10,6 +10,7 @@
       font-family: "Comic Sans MS", cursive, sans-serif;
       background: linear-gradient(to bottom right, #ffe6f7, #fff0d9);
       color: #444;
+      scroll-behavior: smooth; /* smooth scroll without JS */
     }
     nav {
       position: fixed;
@@ -21,7 +22,8 @@
       text-align: center;
       z-index: 999;
     }
-    nav button {
+    nav a {
+      display: inline-block;
       background: #ffde59;
       border: 2px solid #ffb347;
       padding: 8px 16px;
@@ -29,9 +31,11 @@
       font-size: 18px;
       border-radius: 15px;
       cursor: pointer;
+      text-decoration: none;
+      color: #444;
       transition: transform 0.2s, background 0.2s;
     }
-    nav button:hover {
+    nav a:hover {
       background: #ffd36e;
       transform: scale(1.05);
     }
@@ -103,9 +107,9 @@
 </head>
 <body>
   <nav>
-    <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Menu</button>
-    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</button>
-    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Contact</button>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </nav>
   <header>
     <h1>🍦 My Ice Cream Shop</h1>
