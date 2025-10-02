@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mauie's Coffee Brew</title>
+	<style>
+		body{
+			background-color: #F5F5DC;
+			background-size: cover;
+			font-family: Verdana;
+			scroll-behavior: smooth;
+		}
+		header {
+      		background: url("https://png.pngtree.com/background/20210717/original/pngtree-matcha-cake-background-illustration-picture-image_1432759.jpg");
+      		background-size: cover;
+      		background-position: center;
+     		padding: 30px 20px;
+      		text-align: center;
+      		color: saddlebrown;
+      		position: sticky;
+  			top: 0;
+  			width: 100%;
+    	}
+
+    	header h1 {
+      		font-size: 3em;
+      		margin-bottom: 20px;
+      		text-shadow: 2px 2px 5px olivedrab;
+    	}
+
+		nav ul {
+      		list-style: none;
+      		padding: 0;
+      		margin: 20px 0 0;
+      		display: flex;
+      		justify-content: center;
+      		gap: 15px;
+    	}
+    	nav ul li {
+      		display: inline;
+    	}
+
+    	nav ul li a {
+      		background: #6B8E23;
+      		color: white;
+      		padding: 10px 20px;
+      		border-radius: 20px;
+      		text-decoration: none;
+      		font-weight: bold;
+      		transition: all 0.3s ease;
+      		box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+    	}
+
+    	nav ul li a:hover {
+      		background: #556B2F;
+      		transform: scale(1.05);
+    	}
+    	p{
+    		font-size: 30px;
+    	}
+    	#home{
+    		text-align: center;
+    	}
+    	h1{
+    		font-family: Georgia;
+    	}
+    	h4{
+    		font-family: arial;
+    	}
+    	div{
+    		padding: 70px 20px;
+    		text-align: center;
+    	}
+    	#menu{
+    		background-color: #F5DEB3;
+    	}
+    	.menu-item{
+    		display: inline-block;
+    		background: white;
+    		margin: 15px;
+    		padding: 20px;
+    		width: 220px;
+    		border-radius: 10px;
+    		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    		vertical-align: top;
+    		transition: transform 0.2s;
+    		
+
+    	}
+    	.menu-item:hover{
+      		transform: translateY(-5px);
+
+    	}
+    	.menu-item img{
+      		width: 100%;
+      		border-radius: 10px;
+    	}
+    	.menu-item ul {
+    		list-style: none;
+      		padding: 0;
+      		margin: 20px 0 0;
+      		display: flex;
+      		justify-content: center;
+    	}
+
+    	.menu-item ul li {
+      		display: inline;
+    	}
+
+    	.menu-item ul li {
+    		background: #6B8E23;
+      		color: white;
+      		padding: 10px 20px;
+      		border-radius: 20px;
+      		text-decoration: none;
+      		font-weight: bold;
+      		transition: all 0.3s ease;
+      		box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      		text-align: center;
+
+    	}
+    	.menu-item ul li:hover {
+      		background: #556B2F;
+      		transform: scale(1.05);
+      	}
+      	.menu-item p {
+      		font-size: 15px;
+      	}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Mauie's Coffee Brew</h1>
+		<nav>
+			<ul>
+			<li><a href="#home">HOME</a></li>
+			<li><a href="#menu">MENU</a></li>
+			<li><a href="#about">ABOUT</a></li>
+			<li><a href="#contact">CONTACT</a></li>
+		</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="home">
+			<h1>a Necessity, not a Luxury</h1>
+			<h4>For many, coffee is a daily need.</h4> 
+			<h4>Specialty coffee, however, is often seen as a luxury.</h4>
+			<h4>We started Mauie's Coffee Brew to change this perception.</h4>
+		</div>
+	
+	<div id="menu">
+		<h2>Our Menu</h2>
+		<div class="menu-item">
+
+			<img src="https://lifemadesweeter.com/wp-content/uploads/Iced-Matcha-Latte-recipe-500x500.jpg" alt="matcha">
+			<h3>Iced Matcha Latte</h3>
+			<p>Smooth and creamy matcha is lightly sweetened and served with milk and ice.</p>
+			<p><strong>₱210</strong></p>
+			<ul>
+				<li>BUY</li>
+			</ul>
+		</div>
+		<div class="menu-item">
+			<img src="https://cdn11.bigcommerce.com/s-cjh14ahqln/product_images/uploaded_images/finalimage-web.jpg" alt="dalgona">
+			<h3>Dalgona Coffee</h3>
+			<p>Creamy whipped coffee served over milk, popular for its simple yet café-style look.</p>
+			<p><strong>₱240</strong></p>
+			<ul>
+				<li>BUY</li>
+			</ul>
+		</div>
+		<div class="menu-item">
+			<img src="https://bakingmischief.com/wp-content/uploads/2019/05/iced-mocha-image-square.jpg" alt="mocha">
+			<h3>Iced Caffe Mocha</h3>
+			<p>Chilled coffee drink with espresso, chocolate, and milk over ice.</p>
+			<p><strong>₱200</strong></p>
+			<ul>
+				<li>BUY</li>
+			</ul>
+		</div>
+		<div class="menu-item">
+			<img src="https://www.acouplecooks.com/wp-content/uploads/2021/05/Latte-Art-066.jpg" alt="Latte">
+			<h3>Latte</h3>
+			<p>A smooth coffee drink made with espresso and steamed milk.</p>
+			<p><strong>₱159</strong></p>
+			<ul>
+				<li>BUY</li>
+			</ul>
+		</div>
+		<div class="menu-item">
+			<img src="https://cakedbykatie.com/wp-content/uploads/2024/08/gluten-free-pistachio-cake.jpg" alt="pistachio">
+			<h3>Gluten-Free Pistachio cake.</h3>
+			<p>Nutty, wheat-free dessert.</p>
+			<p><strong>₱235</strong></p>
+			<ul>
+				<li>BUY</li>
+			</ul>
+		</div>
+		<div class="menu-item">
+			<img src="https://carveyourcraving.com/wp-content/uploads/2021/01/eggless-tiramisu-at-home.jpg" alt="tiramisu">
+			<h3>Tiramisu Cake</h3>
+			<p>a rich dessert with layers of coffee-soaked sponge, cream, and cocoa</p>
+			<p><strong>₱180</strong></p>
+			<ul>
+				<li>BUY</li>
+			</ul>
+		</div>
+
+
+		
+		
+	</div>
+	<div>
+		
+	</div>
+	</main>
+	
+
+</body>
+</html>
