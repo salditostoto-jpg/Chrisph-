@@ -1,232 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dunkin Donut Store</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎸 DC Guitar Shop</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
     body {
+      font-family: Arial, sans-serif;
+      background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1350&q=80")
+        center/cover no-repeat fixed;
+      color: #fff;
       margin: 0;
-      font-family: Arial;
-      background: url("lorie.png") no-repeat center/cover;
+      padding: 0;
     }
 
-    
-    header {
-      background: #ff9900;
-      padding: 15px;
-      text-align: center;
-      color: #fff;
-    }
-
-   
-    .navbar {
-      display: flex;
-      justify-content: center;
-      background: #ff66b2;
-      padding: 10px;
-    }
-    .navbar button,
-    .close,
-    form button {
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: .3s;
-    }
-    .navbar button {
-      margin: 0 10px;
-      background: #fff;
-    }
-    .navbar button:hover {
-      background: #ff3399;
-      color: #fff;
-    }
-
-   
-    .hero {
-      margin: 30px;
-      padding: 60px 20px;
-      text-align: center;
-      background: rgba(255, 255, 255, .7);
-      border-radius: 20px;
-    }
-    .hero h1 {
-      color: #ff3399;
-    }
-
-   
-    .popup {
-      display: none;
+    nav {
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #fff;
-      padding: 20px;
-      border: 3px solid #ff66b2;
-      border-radius: 15px;
-      z-index: 1000;
-      max-width: 800px;
-      width: 70%;
-      max-height: 80vh;
-      overflow: auto;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, .3);
-    }
-    .popup h2 {
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      padding: 15px 0;
       text-align: center;
-      color: #ff66b2;
-    }
-    .popup img {
-      width: 150px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid #ff66b2;
-    }
-
-    
-    .close {
-      float: right;
-      background: #ff66b2;
-      color: #fff;
-    }
-    .close:hover,
-    form button:hover {
-      background: #ff3399;
-      color: #fff;
-    }
-
-   
-    .overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, .7);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.5);
       z-index: 999;
     }
 
-    
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
+    nav a button {
+      background: #ffcc00;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 8px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      color: #000;
     }
 
-    
-    form {
-      margin-top: 10px;
+    nav a button:hover {
+      background: #ffaa00;
+      transform: scale(1.1);
     }
-    form input {
-      width: 100%;
-      padding: 8px;
-      margin: 6px 0;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+
+    .content {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin: 0;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.7);
+      background-color: #ffcc00;
+      text-align: center;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #f1f1f1;
+    }
+
+    .spacer {
+      height: 100vh; 
+    }
+
+    table {
+      margin: 40px auto;
+      border-spacing: 20px;
+      background: transparent;
+    }
+
+    td {
+      background: transparent;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .product-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 300px;
+    }
+
+    img {
+      height: 300px;
+      width: 300px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+      object-fit: cover;
+    }
+
+    img:hover {
+      transform: scale(1.09);
+    }
+
+    .product-name {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .price {
+      margin-top: 6px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #ffcc00;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
   </style>
 </head>
 <body>
 
- 
-  <header>
-    <h1>🍩 Dunkin Donut Store ni Lorie 🍩</h1>
-  </header>
+  <nav>
+  <div class="logo">🎸 DC Guitar Shop</div>
+  <div class="menu">
+    <a href="#home"><button>Home</button></a>
+    <a href="#products"><button>Products</button></a>
+        <a href="#About"><button>About</button></a>
+    <a href="#gallery"><button>Gallery</button></a>
+  </div>
+</nav>
 
- 
-  <div class="navbar">
-    <button onclick="openPopup('home')">Home</button>
-    <button onclick="openPopup('menu')">Menu</button>
-    <button onclick="openPopup('order')">Order</button>
-    <button onclick="openPopup('franchise')">Franchise</button>
-    <button onclick="openPopup('about')">About Us</button>
+
+  <div class="content" id="home">
+    <h1>🎸 DC Guitar Shop</h1>
+    <p>Where guitar is your best friend!</p>
   </div>
 
-  
-  <div class="hero">
-    <h1>Fresh Donuts & Coffee Everyday</h1>
-    <p><i><b>"Donuts and coffee taste sweet… but never sweeter than Ma’am!"</b></i></p>
+  <div class="spacer"></div>
+
+  <div class="content" id="products">
+    <h1>Products</h1>
+    <table>
+      <tr>
+        <th colspan="4" style="text-align: center; font-size: 50px;">Acoustic Guitars</th>
+      </tr>
+
+      
+      <tr>
+        <td>
+          <div class="product-container">
+            <img src="https://www.elderly.com/cdn/shop/files/1_d22da9ea-43f9-42df-997f-978f6f3a1457.jpg?v=1740687546&width=1946">
+            <div class="product-name">Phoebus PG-20NCE v3 All-Mahogany OM/000 (3rd Gen.) Acoustic Guitar</div>
+            <div class="price">₱5,999</div>
+          </div>
+        </td>
+
+        <td>
+          <div class="product-container">
+            <img src="https://guitarworks.ca/cdn/shop/products/fqw1b8ndhgv9l8dxy3dq_1200x.jpg?v=1569010510">
+            <div class="product-name">Phoebus PG-30NCE v3 All-Mahogany Dreadnought (3rd Gen.) Acoustic Guitar</div>
+            <div class="price">₱2,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://ddmusic.ph/wp-content/uploads/2024/02/carissa-1.jpg">
+            <div class="product-name">Sevillana 2101 All-Solid Acoustic Guitar</div>
+            <div class="price">₱3,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://cdn.shopify.com/s/files/1/0420/8948/0359/files/Untitled_design_39.png?v=1718802691">
+            <div class="product-name">Phoebus PG-50ce v3 Solid Top Dreadnought (3rd Gen.) Acoustic Guitar</div>
+            <div class="price">₱4,999</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-container">
+            <img src="https://www.jbmusic.com.ph/__resources/webdata/images/products/7314.jpg.ashx?zoom=.6">
+            <div class="product-name">Tyma D-3C RSE (PG-50NCE) Solid Top Dreadnought Acoustic Guitar</div>
+            <div class="price">₱3,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://www.sweelee.ph/cdn/shop/files/products_2FF03-097-0743-513_2FF03-097-0743-513_1697108651010.jpg?v=1699333030&width=2048">
+            <div class="product-name">Tyma V-3 Plume Solid Top GS Mini 36 Acoustic Guitar</div>
+            <div class="price">₱4,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://images.musicstore.de/images/1280/martin-guitars-000-10e_1_GIT0050169-000.jpg">
+            <div class="product-name">Tyma G-3 CBE Solid Sitka Spruce Top Mahogany Auditorium Acoustic Guitar</div>
+            <div class="price">₱3,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://armadillo.sirv.com/assets/gallery/vistadeer/vistadeer.jpg?w=600&format=webp&q=80&subsampling=4:2:0">
+            <div class="product-name">YAMAHA F310 Spruce Top Dreadnought Acoustic Guitar</div>
+            <div class="price">₱6,999</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th colspan="4" style="text-align: center; font-size: 50px;">Electric Guitars</th>
+      </tr>
+
+    
+      <tr>
+        <td>
+          <div class="product-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMh7T4_LVkIGZRpudZxFOpy4aQactjnXkG-A&s">
+            <div class="product-name">Tagima TG-530 PRO Stratocaster Woodstock Series Black Electric Guitar</div>
+            <div class="price">₱6,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://images.squarespace-cdn.com/content/v1/5c3bf984a9e028aedaf419bd/9eda2292-0fd1-41f3-ba2b-bc4a815c02eb/NS2-CB.jpeg?format=2500w">
+            <div class="product-name">Tagima TW-61 JM-Style Electric Guitar</div>
+            <div class="price">₱5,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://www.sweelee.ph/cdn/shop/files/products_2FJ08-291-4413-503_2FJ08-291-4413-503_1694071396470.jpg?v=1700626587&width=2048">
+            <div class="product-name">Tagima TG-530 S-Style Woodstock Series Electric Guitar</div>
+            <div class="price">₱7,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://r2.gear4music.com/media/23/235037/600/preview_7.jpg">
+            <div class="product-name">PRS Guitars SE DGT Electric Guitar</div>
+            <div class="price">₱5,999</div>
+          </div>
+        </td>
+      </tr>
+
+      
+      <tr>
+        <td>
+          <div class="product-container">
+            <img src="https://cdn.djcity.com.au/wp-content/uploads/2024/06/28172839/GigKit-Electric-Guitar-Pack-Flying-V-Rock-Style-Black00025.jpg">
+            <div class="product-name">GigKit Flying V Electric Guitar Pack</div>
+            <div class="price">₱11,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://m.media-amazon.com/images/I/71CAjWR5OvL._AC_SL1500_.jpg">
+            <div class="product-name">Tagima TG-510 HSS Woodstock Series Electric Guitar</div>
+            <div class="price">₱6,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://shop.theartsmusicstore.com/cdn/shop/files/0000_d6bc798e-4c49-478b-842f-50e4351a303b_1024x1024.jpg?v=1707255228">
+            <div class="product-name">Tagima TW-61 JM-Style Electric Guitar</div>
+            <div class="price">₱9,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://lyric.ph/storage/files/67e653238cfebdXWAqWIDHbDGkhBVDcEZEy2sGE6kY6KATuBYxjrJ.jpg">
+            <div class="product-name">Tagima TG-540 HSS S-Style Woodstock Series Electric Guitar</div>
+            <div class="price">₱8,999</div>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th colspan="4" style="text-align: center; font-size: 50px;">Bass Guitars</th>
+      </tr>
+  <tr>
+        <td> 
+          <div class="product-container">
+            <img src="https://www.jbmusic.com.ph/__resources/webdata/images/products/7078.jpg.ashx?zoom=.6">
+            <div class="product-name">Tagima TW-66 '51 PB Bass - Butterscotch</div>
+            <div class="price">₱8,999</div>
+          </div>
+        </td>
+        <td>
+        <div class="product-container">
+          <img src="https://www.jbmusic.com.ph/__resources/webdata/images/product-gallery/18193_6704.jpg">
+          <div class="product-name">Sire V7 Alder 4-String Burgundy Bass</div>
+          <div class="price">₱7,999</div>
+        </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://lazermusic.com.ph/cdn/shop/files/spes_5.png?v=1718067742">
+            <div class="product-name">Vintage Reissued V96 5-String Active Bass</div>
+            <div class="price">₱9,999</div>
+          </div>
+        </td>
+         <td>
+          <div class="product-container">
+            <img src="https://www.jbmusic.com.ph/__resources/webdata/images/products/6165.jpg">
+            <div class="product-name">Tagima TW-65 P+J Bass</div>
+            <div class="price">₱10,999</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="product-container">
+            <img src="https://www.sweelee.ph/cdn/shop/files/products_2FF03-563-3100-383_2FF03-563-3100-383_1731986981150.jpg?v=1731986990&width=2048">
+            <div class="product-name">Tagima TJB-5 JB Bass 4-String</div>
+            <div class="price">₱7,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://www.artistguitars.co.uk/cdn/shop/files/17019.jpg?v=1759058938">
+            <div class="product-name">Tagima TW-73 4-String '73 Jazz Bass</div>
+            <div class="price">₱9,999</div>
+          </div>t
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://www.sweelee.ph/cdn/shop/files/products_2FS22-RAY4-BK-M1_2FS22-RAY4-BK-M1_1697006987620.jpg?v=1697006996&width=2048">
+            <div class="product-name">Sire Z7 Alder 4-String Bass</div>
+            <div class="price">₱6,999</div>
+          </div>
+        </td>
+        <td>
+          <div class="product-container">
+            <img src="https://ploutone.com/cdn/shop/files/49_c886a094-e9e0-40c0-af17-72b3a263d7e8_1024x1024.png?v=1683939033">
+            <div class="product-name">Tagima TJB-5 JB Bass 4-String</div>
+            <div class="price">₱8,999</div>
+          </div>
+        </td>
+      </tr>
+
+    </table>
   </div>
 
- 
-  <div id="overlay" class="overlay" onclick="closePopup()"></div>
-
-  
-  <div id="home" class="popup">
-    <button class="close" onclick="closePopup()">X</button>
-    <h2>Home</h2>
-    <p>Welcome to Dunkin' Donut! Enjoy our freshly baked doughnuts and brewed coffee made with love daily. 🍩☕</p>
+  <div id="About" class="content">
+    <h1>About</h1>
+    <p>Welcome to DC Guitar Shop! We offer a wide variety of guitars to suit every style and budget. Whether you are a beginner or a seasoned player, we have the perfect guitar for you.</p>
   </div>
-
-  
-  <div id="menu" class="popup">
-    <button class="close" onclick="closePopup()">X</button>
-    <h2>Our Menu</h2>
-    <div class="menu-grid">
-      <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQoaA7-liBKppcPwIncH9BPcb-DXxrpzfIFH_JdWtT4dBbj6xLeh7ZfDw&s=10">
-        <p>Chocolate Donut - ₱50</p>
-      </div>
-      <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQCRQAlagW6oV8LoOUJWaq1QRPdqZNFmgdHSereP8y0RUn1KCNJ4MfZL4&s=10">
-        <p>Glazed Donut - ₱45</p>
-      </div>
-      <div>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4grMisy4ghZG9qKC8AWsv6F08UFUF8cjkTA&s">
-        <p>Hot Coffee - ₱65</p>
-      </div>
-    </div>
-  </div>
-
-  
-  <div id="order" class="popup">
-    <button class="close" onclick="closePopup()">X</button>
-    <h2>Place Your Order</h2>
-    <form>
-      <input type="text" placeholder="Name" required>
-      <input type="text" placeholder="Item" required>
-      <input type="number" min="1" placeholder="Quantity" required>
-      <input type="text" placeholder="Total Price (manual)">
-      <button type="submit">Submit Order</button>
-    </form>
-  </div>
-
-  
-  <div id="franchise" class="popup">
-    <button class="close" onclick="closePopup()">X</button>
-    <h2>Franchise Info</h2>
-    <p>Start your own Dunkin' Donut franchise! We provide: ✔ Training ✔ Marketing ✔ Recipes</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email" required>
-      <button type="submit">Apply Now</button>
-    </form>
-  </div>
-
- 
-  <div id="about" class="popup">
-    <button class="close" onclick="closePopup()">X</button>
-    <h2>About Us</h2>
-    <p>
-      Dunkin’ Donut has been serving smiles for decades. With every doughnut and coffee,
-      our mission is to spread joy and taste. Today, with thousands of branches worldwide,
-      we stay committed to freshness, quality, and happiness. 💖
-    </p>
-  </div>
-
-  
-  <script>
-    function openPopup(id) {
-      document.getElementById(id).style.display = 'block';
-      overlay.style.display = 'block';
-    }
-    function closePopup() {
-      document.querySelectorAll('.popup').forEach(p => p.style.display = 'none');
-      overlay.style.display = 'none';
-    }
-  </script>
 
 </body>
 </html>
