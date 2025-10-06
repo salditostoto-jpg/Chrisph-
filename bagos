@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaze's Velvet Tea Shop 🧋</title>
+  <style>
+  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #b51b1b, #f07d7d);
+      color: #fff;
+    }
+
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: orange;
+      text-shadow: 2px 2px #400000;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: white;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: orange;
+    }
+
+    
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpHaPz-PFAJUJHxRNh-OCu1hYkQEmYAQCel4frlrGg_gNr60shDJXMrXI&s=10') no-repeat center/cover;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      color: #fff;
+      text-shadow: 2px 2px 5px #400000;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-top: 15px;
+      color: #fff;
+    }
+
+    .btn {
+      background: orange;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffcc66;
+      color: #400000;
+    }
+
+  
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      text-align: center;
+      color: orange;
+      margin-bottom: 40px;
+      font-size: 36px;
+    }
+
+    .drinks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .drink-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .drink-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .drink-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .drink-card h3 {
+      color: #fff;
+      margin-top: 15px;
+    }
+
+    
+    .about {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+    }
+
+  
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #400000;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">😋 Jaze's Velvet Tea 🧋</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#drinks">Drinks</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>Welcome to Jaze's Velvet Tea</h1>
+    <p>Isang higop tanggal kaluluwa.</p>
+    <button class="btn">Order Now</button>
+  </section>
+
+  <section id="drinks">
+    <h2>Our Drinks</h2>
+    <div class="drinks">
+      <div class="drink-card">
+        <img src="https://images.unsplash.com/photo-1615485737457-ef2c91b415a0?auto=format&fit=crop&w=600&q=60" alt="Milk Tea">
+        <h3>Classic Milk Tea</h3>
+      </div>
+      <div class="drink-card">
+        <img src="https://images.unsplash.com/photo-1626198330901-2cf3e7b7280c?auto=format&fit=crop&w=600&q=60" alt="Strawberry">
+        <h3>Strawberry Bliss</h3>
+      </div>
+      <div class="drink-card">
+        <img src="https://images.unsplash.com/photo-1623258961677-b62f6c4459d9?auto=format&fit=crop&w=600&q=60" alt="Matcha">
+        <h3>Matcha Supreme</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="about">
+      <p>At Jaze’s Velvet Tea, we serve happiness in a cup. Our drinks are made with fresh ingredients, creamy textures, and a touch of love — perfect for every mood and moment.</p>
+    </div>
+  </section>
+
+  
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact">
+      <p>📍 Location: Poblacion, Batangas City</p>
+      <p>📞 0912 345 6789</p>
+      <p>📧 jazesvelvettea@gmail.com</p>
+    </div>
+  </section>
+
+  
+</body>
+</html>
