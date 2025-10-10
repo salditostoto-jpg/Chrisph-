@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lorie's Donut Shop</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to bottom, #FF9D00 0%, #B6771D 50%, #7B542F 100%);
+    }
+    header {
+      background: url("https://static.vecteezy.com/system/resources/previews/055/490/263/non_2x/bread-background-hand-drawn-bread-seamless-pattern-motif-wallpaper-bakery-bake-shop-backdrop-or-food-wrapper-free-vector.jpg");
+      background-size: cover;
+      background-position: center;
+      padding: 25px;
+      color: #6b3801;
+      text-align: center;
+      border-bottom: 6px solid #733700;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      font-size: 2.2em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 16px;
+      border: 5px solid #7B542F;
+      border-radius: 25px;
+      background: rgba(237, 147, 28, 0.75);
+      transition: all 0.3s ease;
+    }
+    nav a:hover {
+      background: #a38124;
+      color: black;
+      transform: scale(1.05);
+    }
+    main {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+    section {
+      padding: 70px 0;
+    }
+    h2 {
+      border-bottom: 4px solid #59300a;
+      padding-bottom: 6px;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+      color: #59300a;
+      text-align: center;
+    }
+    .menu-title {
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #733700;
+      margin: 50px 0 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+    }
+    .menu-title span {
+      display: inline-block;
+      background: #d9d1ca;
+      padding: 10px 20px;
+      border-radius: 15px;
+      border: 3px solid #733700;
+    }
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 35px;
+    }
+    .menu li {
+      border-radius: 15px;
+      padding: 15px;
+      background: #fff;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .menu li:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+    }
+    .menu img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 3px solid #7B542F;
+      margin-bottom: 12px;
+      transition: transform 0.3s ease;
+    }
+    .menu li:hover img {
+      transform: scale(1.05);
+    }
+    .menu button {
+      margin-top: 8px;
+      padding: 10px 16px;
+      background: #7B542F;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    .menu button:hover {
+      background: #FF9D00;
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: url("https://www.toptal.com/designers/subtlepatterns/uploads/wood_pattern.png");
+      background-size: cover;
+      color: white;
+      font-weight: bold;
+      border-top: 5px solid brown;
+    }
+    section h2{
+      border: 10px solid #6b3801;
+      border-radius:25px;
+      background: url(https://png.pngtree.com/thumb_back/fh260/background/20210415/pngtree-vintage-paper-background-brown-abstract-shades-image_625141.jpg);
+    }
+    section img{
+      border: 5px solid brown;
+      border-radius: 10%;
+    }
+
+    /* ✅ HOME SECTION */
+    .home-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px;
+    }
+
+    .home-images {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .home-images img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 4px solid #733700;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease;
+    }
+
+    .rotate-left { transform: rotate(-10deg); }
+    .rotate-center { transform: rotate(0deg); }
+    .rotate-right { transform: rotate(10deg); }
+
+    .home-images img:hover {
+      transform: scale(1.05) rotate(0deg);
+    }
+
+    .home-text {
+      max-width: 400px;
+      color: #fff;
+      text-align: left;
+      background: rgba(123, 84, 47, 0.6);
+      padding: 20px 25px;
+      border-radius: 15px;
+      border: 3px solid #733700;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .home-text h3 {
+      margin-top: 0;
+      color: #ffe5b4;
+      font-size: 1.8em;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    }
+
+    .home-text p {
+      font-size: 1.1em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> 🍞Baillo's Bread Shop</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    
+    <section id="home" class="home">
+      <div class="menu-title"><span>🏠 Home</span></div>
+      <div class="home-container">
+        <div class="home-images">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF8iwAehoFzu0-2gHQpgU_HlaF5dZdPC0jzw&s" class="rotate-left">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQf1eR59_cOQsxAzx2aCDQ379y1zdj1h293Tvy3YCQjTH4YHxGBXvydc&s=10" class="rotate-center">
+          <img src="https://i.pinimg.com/originals/21/0e/81/210e81d267f3690cde8484bab5ee63b0.jpg" class="rotate-right">
+        </div>
+        <div class="home-text">
+          <h3>About Baillo’s Bread Shop 🍞</h3>
+          <p>
+            Every loaf tells a story — of warmth, comfort, and the joy of sharing. 
+            At <b>Baillo’s Bread Shop</b>, we bake with love and passion, bringing the 
+            heavenly aroma of freshly made bread right to your heart.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <div class="menu-title"><span>🍞 Menu</span></div>
+    <section id="menu" class="menu">
+      <h2>Bread</h2>
+      <ul>
+        <li><img src="https://www.aberdeenskitchen.com/wp-content/uploads/2020/08/Classic-Crusty-French-Baguettes-3.jpg" alt="Blueberry Donut"><p>Blueberry Donut - ₱60</p><button>Add</button></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdyjjzNHfaYV-E9AbbPAaiAOWuEaDGIwGKlg&s" alt="Chocolate Donut"><p>Chocolate Donut - ₱50</p><button>Add</button></li>
+        <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvdiJcKUPmkZWOuQgDiquhfO2Lnb4ipIsP_A&s" alt="Strawberry Donut"><p>Strawberry Donut - ₱55</p><button>Add</button></li>
+        <li><img src="https://hips.hearstapps.com/hmg-prod/images/glazed-donut-recipe-1-65008ab2b45fb.jpg?crop=0.75xw:1xh;center,top&resize=1200:*" alt="Glazed Donut"><p>Glazed Donut - ₱45</p><button>Add</button></li>
+      </ul>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p style="text-align:center; max-width:700px; color: white; margin:auto;">
+        "Start your day with the irresistible aroma of freshly baked bread. At Baillo's Bread Shop, we lovingly craft every loaf and pastry using only the finest ingredients, blending time-honored techniques with a passion for flavor."
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Contact No.</h2>
+    <p>📍 Location: Paranaque National High School-Main</p>
+    <p>📞 0912 345 6789</p>
+    <p>📧 baillobreadshop@gmail.com</p>
+    <p>© 2025 Baillo's Bread Shop</p>
+  </footer>
+</body>
+</html>
